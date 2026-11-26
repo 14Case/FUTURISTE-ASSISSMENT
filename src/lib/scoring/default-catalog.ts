@@ -603,12 +603,12 @@ export const DEFAULT_TESTS: CatalogTest[] = [
 
 /** Session réelle fournie par le club (pas une donnée fictive). */
 export const INITIAL_SESSION = {
-  name: "Test d'aptitude FUTURISTE ACADÉMIE FC – Saison 2026–2027",
-  description: "Test d'aptitude de début de saison pour les catégories U6–U9, U10–U13 et U14–U16.",
+  name: "Test d'aptitude FUTURISTE ACADÉMIE FC - Saison 2026-2027",
+  description: "Test d'aptitude de début de saison pour les catégories U6-U9, U10-U13 et U14-U16.",
   session_date: "2026-11-28",
   start_time: "09:30",
   location: "École Publique de Japoma, Douala, Cameroun",
-  season: "2026–2027",
+  season: "2026-2027",
 };
 
 export const DEFAULT_PARENT_MESSAGE = `Bonjour,

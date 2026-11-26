@@ -24,7 +24,7 @@ insert into public.assessment_categories (code, label, min_age, max_age, sort_or
 on conflict (code) do nothing;
 
 insert into public.seasons (label, start_date, end_date)
-values ('2026–2027', '2026-09-01', '2027-08-31')
+values ('2026-2027', '2026-09-01', '2027-08-31')
 on conflict (label) do nothing;
 
 insert into public.club_settings (id, parent_message_template, current_season_id)
@@ -37,7 +37,7 @@ Ce rapport présente ses résultats athlétiques, techniques, physiques, de comp
 Nous vous remercions pour votre confiance et votre engagement dans le développement sportif de votre enfant.
 
 FUTURISTE ACADÉMIE FC
-Former, développer et révéler les talents.', (select id from public.seasons where label = '2026–2027'))
+Former, développer et révéler les talents.', (select id from public.seasons where label = '2026-2027'))
 on conflict (id) do nothing;
 
 insert into public.assessment_tests (code, name, domain, max_points, description, instructions, sort_order) values
@@ -121,10 +121,10 @@ on conflict on constraint rubric_versions_unique_version do nothing;
 -- Session réelle du 28 novembre 2026 (créée en brouillon).
 with s as (
   insert into public.assessment_sessions (name, description, session_date, start_time, location, season_id, status)
-  select 'Test d''aptitude FUTURISTE ACADÉMIE FC – Saison 2026–2027', 'Test d''aptitude de début de saison pour les catégories U6–U9, U10–U13 et U14–U16.', '2026-11-28',
+  select 'Test d''aptitude FUTURISTE ACADÉMIE FC - Saison 2026-2027', 'Test d''aptitude de début de saison pour les catégories U6-U9, U10-U13 et U14-U16.', '2026-11-28',
          '09:30', 'École Publique de Japoma, Douala, Cameroun',
-         (select id from public.seasons where label = '2026–2027'), 'draft'
-  where not exists (select 1 from public.assessment_sessions where name = 'Test d''aptitude FUTURISTE ACADÉMIE FC – Saison 2026–2027')
+         (select id from public.seasons where label = '2026-2027'), 'draft'
+  where not exists (select 1 from public.assessment_sessions where name = 'Test d''aptitude FUTURISTE ACADÉMIE FC - Saison 2026-2027')
   returning id
 ), cats as (
   insert into public.session_categories (session_id, category_id)
