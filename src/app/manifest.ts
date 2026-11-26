@@ -16,15 +16,15 @@ export default function manifest(): MetadataRoute.Manifest {
     categories: ["sports", "education", "productivity"],
     icons: [
       {
-        src: "/brand/icon-192.svg",
+        src: "/brand/icon-192.png",
         sizes: "192x192",
-        type: "image/svg+xml",
+        type: "image/png",
         purpose: "any",
       },
       {
-        src: "/brand/icon-512.svg",
+        src: "/brand/icon-512.png",
         sizes: "512x512",
-        type: "image/svg+xml",
+        type: "image/png",
         purpose: "maskable",
       },
     ],

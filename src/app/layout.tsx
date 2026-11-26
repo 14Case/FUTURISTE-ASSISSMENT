@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     title: "FAFC Éval",
   },
   icons: {
-    icon: "/brand/icon-192.svg",
-    apple: "/brand/icon-192.svg",
+    icon: "/brand/icon-192.png",
+    apple: "/brand/apple-touch-icon.png",
   },
 };
 

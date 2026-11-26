@@ -11,7 +11,7 @@ export default function ConfigurationRequisePage() {
       <div className="w-full max-w-2xl space-y-6">
         <div className="pitch-pattern rounded-3xl p-6 sm:p-8 text-white shadow-lg flex items-center gap-4">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/brand/logo.svg" alt="FAFC" className="h-16 w-16 shrink-0" />
+          <img src="/brand/logo-pdf.png" alt="FAFC" className="h-16 w-16 shrink-0 rounded-full bg-white p-0.5 shadow-md" />
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-sky-300">
               FUTURISTE ACADÉMIE FC

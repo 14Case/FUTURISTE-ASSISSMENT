@@ -170,7 +170,7 @@ export default function ConnexionPage() {
       <div className="lg:col-span-5 pitch-pattern text-white p-8 sm:p-12 flex flex-col justify-between">
         <div className="flex items-center gap-3.5">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/brand/logo.svg" alt="FUTURISTE ACADÉMIE FC" className="h-14 w-14" />
+          <img src="/brand/logo-pdf.png" alt="FUTURISTE ACADÉMIE FC" className="h-16 w-16 rounded-full bg-white p-0.5 shadow-md" />
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-sky-300">
               Centre de Formation

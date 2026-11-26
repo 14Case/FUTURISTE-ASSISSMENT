@@ -1,9 +1,12 @@
+import { existsSync, readFileSync } from "node:fs";
+import { join } from "node:path";
 import React from "react";
 import {
   Document,
   Page,
   View,
   Text,
+  Image,
   Svg,
   Polygon,
   Line,
@@ -209,7 +212,47 @@ const styles = StyleSheet.create({
   },
 });
 
-function ClubEmblemSvg({ size = 44 }: { size?: number }) {
+let cachedLogoDataUri: string | null | undefined;
+
+function getOfficialLogoDataUri(): string | null {
+  if (cachedLogoDataUri !== undefined) return cachedLogoDataUri;
+  try {
+    const logoFile = join(process.cwd(), "public", "brand", "logo-pdf.png");
+    if (existsSync(logoFile)) {
+      const b64 = readFileSync(logoFile).toString("base64");
+      cachedLogoDataUri = `data:image/png;base64,${b64}`;
+      return cachedLogoDataUri;
+    }
+  } catch {
+    // Repli sur le blason vectoriel si indisponible
+  }
+  cachedLogoDataUri = null;
+  return null;
+}
+
+function ClubEmblem({ size = 48 }: { size?: number }) {
+  const logoSrc = getOfficialLogoDataUri();
+  if (logoSrc) {
+    return (
+      <View
+        style={{
+          width: size + 4,
+          height: size + 4,
+          borderRadius: (size + 4) / 2,
+          backgroundColor: COLORS.white,
+          padding: 2,
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        {/* eslint-disable-next-line jsx-a11y/alt-text */}
+        <Image
+          src={logoSrc}
+          style={{ width: size, height: size, borderRadius: size / 2 }}
+        />
+      </View>
+    );
+  }
   return (
     <Svg width={size} height={size} viewBox="0 0 100 100">
       <Path
@@ -390,7 +433,7 @@ export function AssessmentReportDocument({
 
         <View style={styles.headerStrip}>
           <View style={{ flexDirection: "row", alignItems: "center" }}>
-            <ClubEmblemSvg size={46} />
+            <ClubEmblem size={48} />
             <View style={{ marginLeft: 12 }}>
               <Text style={styles.clubTitle}>{clubName}</Text>
               <Text style={styles.clubSub}>{tagline}</Text>

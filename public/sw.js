@@ -16,9 +16,10 @@ const CACHE_PAGES = "fafc-pages-v1";
 
 const PRECACHE_URLS = [
   "/manifest.webmanifest",
-  "/brand/logo.svg",
-  "/brand/icon-192.svg",
-  "/brand/icon-512.svg",
+  "/brand/logo-pdf.png",
+  "/brand/icon-192.png",
+  "/brand/icon-512.png",
+  "/brand/apple-touch-icon.png",
 ];
 
 self.addEventListener("install", (event) => {

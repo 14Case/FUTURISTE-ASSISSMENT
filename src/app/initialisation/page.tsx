@@ -68,7 +68,7 @@ export default function InitialisationPage() {
       <div className="w-full max-w-lg space-y-6">
         <div className="pitch-pattern rounded-3xl p-6 text-white flex items-center gap-4">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/brand/logo.svg" alt="FAFC" className="h-12 w-12" />
+          <img src="/brand/logo-pdf.png" alt="FAFC" className="h-14 w-14 rounded-full bg-white p-0.5 shadow-md" />
           <div>
             <p className="text-xs uppercase font-bold text-sky-300">
               Amorçage sécurisé

@@ -155,9 +155,9 @@ export function AppShell({
           <div className="flex items-center gap-3">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/brand/logo.svg"
-              alt="Emblème FUTURISTE ACADÉMIE FC"
-              className="h-11 w-11 shrink-0 drop-shadow-md"
+              src="/brand/logo-pdf.png"
+              alt="Logo officiel FUTURISTE ACADÉMIE FC"
+              className="h-12 w-12 shrink-0 rounded-full bg-white p-0.5 shadow-md"
             />
             <div className="min-w-0">
               <p className="truncate text-sm font-black tracking-wide">
@@ -247,7 +247,7 @@ export function AppShell({
             </button>
             <div className="flex items-center gap-2.5 lg:hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/brand/logo.svg" alt="FAFC" className="h-8 w-8" />
+              <img src="/brand/logo-pdf.png" alt="FAFC" className="h-9 w-9 rounded-full bg-white p-0.5 shadow-xs" />
               <span className="font-black text-sm tracking-tight text-violet-900 dark:text-sky-300">
                 FAFC ÉVALUATION
               </span>
@@ -312,7 +312,7 @@ export function AppShell({
             <div className="pitch-pattern p-4 text-white flex items-center justify-between">
               <div className="flex items-center gap-2.5">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/brand/logo.svg" alt="FAFC" className="h-9 w-9" />
+                <img src="/brand/logo-pdf.png" alt="FAFC" className="h-10 w-10 rounded-full bg-white p-0.5" />
                 <div>
                   <p className="text-sm font-black">{clubName}</p>
                   <p className="text-[11px] text-sky-300">
