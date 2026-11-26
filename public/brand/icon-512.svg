@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" fill="#5B21B6"/>
+  <path d="M256 68L406 130V254C406 354 342 432 256 462C170 432 106 354 106 254V130L256 68Z" fill="#4C1D95" stroke="#7DD3FC" stroke-width="12"/>
+  <circle cx="256" cy="236" r="74" fill="#FFFFFF" fill-opacity="0.12" stroke="#7DD3FC" stroke-width="9"/>
+  <polygon points="256,184 288,208 276,246 236,246 224,208" fill="#7DD3FC"/>
+  <text x="256" y="378" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="56" letter-spacing="6">FAFC</text>
+</svg>

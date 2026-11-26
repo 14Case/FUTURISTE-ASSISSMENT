@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --fafc-violet: #5b21b6;
+  --fafc-violet-dark: #4c1d95;
+  --fafc-sky: #7dd3fc;
+  --fafc-sky-deep: #0284c7;
+  --fafc-slate: #0f172a;
+  --fafc-success: #16a34a;
+  --fafc-warning: #ea580c;
+
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #475569;
+  --border: #e2e8f0;
+  --ring: #5b21b6;
+}
+
+.dark {
+  --background: #090d16;
+  --foreground: #f8fafc;
+  --card: #111827;
+  --card-foreground: #f8fafc;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --border: #1f2937;
+  --ring: #7dd3fc;
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1;
+  }
+}
+
+/* Motif discret inspiré du tracé d'un terrain de football pour les en-têtes */
+.pitch-pattern {
+  background-image:
+    radial-gradient(circle at 88% 50%, rgba(125, 211, 252, 0.16) 0, rgba(125, 211, 252, 0.16) 2px, transparent 2px),
+    linear-gradient(135deg, #4c1d95 0%, #5b21b6 55%, #3b0764 100%);
+}
+
+.pitch-grid {
+  background-size: 28px 28px;
+  background-image:
+    linear-gradient(to right, rgba(91, 33, 182, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(91, 33, 182, 0.045) 1px, transparent 1px);
+}
