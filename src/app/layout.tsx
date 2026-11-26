@@ -24,10 +24,6 @@ export const metadata: Metadata = {
     statusBarStyle: "black-translucent",
     title: "FAFC Éval",
   },
-  icons: {
-    icon: "/brand/icon-192.png",
-    apple: "/brand/apple-touch-icon.png",
-  },
 };
 
 export const viewport: Viewport = {
